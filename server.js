@@ -13,6 +13,6 @@ http.createServer(function (req, res) {
 	}
 	body = body + '</ul></body></html>';
 	res.end(body);
-}).listen(80);
+}).listen(process.env.PORT || 80);
 
 console.log('Server running at localhost:80/');
