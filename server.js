@@ -7,7 +7,7 @@ var processUniqueUuid = 'xxx'.replace(/[xy]/g, function(c) {
 
 http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/html'});
-	var body = '<html><head><title>Sample NodeJS Webapp</title></head><body><h2>Served from Docker Container: '+processUniqueUuid+'</h2>Headers:<ul>';
+	var body = '<html><head><title>Sample NodeJS Webapp</title></head><body><h2>Served from Docker Container: '+processUniqueUuid+'</h2>Headers:<ul><hr>';
 	for (var i in req.headers) {
 		body = body + ('<li>'+i+' - '+req.headers[i]+'</li>');
 	}
