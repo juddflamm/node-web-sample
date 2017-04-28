@@ -20,6 +20,7 @@ http.createServer(function (req, res) {
 				width: 92%;
 				margin: 0 auto;
 				display: flex;
+				flex-direction: column;
 			}
 
 			.site-heading .container {
@@ -61,12 +62,17 @@ http.createServer(function (req, res) {
 		<heading class="site-heading">
 			<div class="container">
 				<span>
-				<h1>Served From host: ${processUniqueUuid}</h1>
+				<h1>Node Web Sample</h1>
 				</span>
 			</div>
 		</heading>
 		<div class="container">
-			<h4>Headers</h4>
+			<h2>Served From host</h2>
+			<p>
+			${processUniqueUuid}
+			</p>
+
+			<h2>Headers</h2>
 			<ul>
 			${listOfHeaders(req.headers)}
 			</ul>
