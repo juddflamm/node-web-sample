@@ -15,11 +15,46 @@ http.createServer(function (req, res) {
 			html{background-color:#FFF;min-height:100%}
 			body{margin:0}
 			body,input,select,textarea{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;font-size:16pt;box-sizing:border-box;color:#000;-webkit-font-smoothing:antialiased}
-			.container{display:block}
-			.site-heading {background-color: skyblue; color: rgb(0, 0, 0); text-align: center; display: flex; flex-direction: column; padding: 0.5em; margin: 0px;}
-			.site-heading span{display:flex;align-items:center;justify-content:center}
-			.site-heading h1{font-size:200%;margin:.3em 0 .5em .5em;letter-spacing:0;font-weight:200}
-			.site-heading img.logo{display:none}
+
+			.container {
+				width: 92%;
+				margin: 0 auto;
+				display: flex;
+			}
+
+			.site-heading .container {
+				justify-content: space-between;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.site-heading {
+				background-color: skyblue;
+				color: rgb(0, 0, 0);
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				padding: 0.5em;
+				margin: 0px;
+			}
+
+			.site-heading span{
+				display:flex;
+				align-items:center;
+				justify-content:center
+			}
+
+			.site-heading img.logo {
+				height: 70px;
+				display: flex;
+			}
+
+			.site-heading h1 {
+				font-size: 200%;
+				margin: .3em 0 .5em .5em;
+				letter-spacing: 0;
+				font-weight: 200;
+			}
 		</style>
 		</head>
 		<body>
@@ -30,8 +65,7 @@ http.createServer(function (req, res) {
 				</span>
 			</div>
 		</heading>
-		<hr>
-		<h4>Headers<h4>
+		<h4>Headers</h4>
 		<ul>
 		${listOfHeaders(req.headers)}
 		</ul>
@@ -43,7 +77,7 @@ http.createServer(function (req, res) {
 function listOfHeaders(headers) {
 	let html = "";
 	for (var i in headers) {
-		html += (`<li><strong>${i}</strong> - ${headers[i]}</li>\n`);
+		html += (`<li><strong>${i}</strong> ${headers[i]}</li>\n`);
 	}
 	return html;
 }
