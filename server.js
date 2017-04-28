@@ -12,14 +12,24 @@ http.createServer(function (req, res) {
 		<head>
 		<title>Sample NodeJS Webapp</title>
 		<style>
-			html{background-color:#0c141f;min-height:100%}
+			html{background-color:#FFF;min-height:100%}
 			body{margin:0}
 			body,input,select,textarea{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;font-size:16pt;box-sizing:border-box;color:#e6ffff;-webkit-font-smoothing:antialiased}
 			a{color:#6fc3df}
 			.monospace{font-family:Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}
 			.hidden,.hide-until-load{visibility:hidden}
 			.container{display:block}
-			.site-heading{padding:.5em;text-align:center;margin:0;display:flex;flex-direction:column}
+
+			.site-heading {
+				background-color: skyblue;
+				color: rgb(0, 0, 0);
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				padding: 0.5em;
+				margin: 0px;
+			}
+			
 			.site-heading span{display:flex;align-items:center;justify-content:center}
 			.site-heading h1{font-size:200%;margin:.3em 0 .5em .5em;letter-spacing:0;font-weight:200}
 			.site-heading img.logo{display:none}
@@ -29,7 +39,7 @@ http.createServer(function (req, res) {
 		<heading class="site-heading">
 			<div class="container">
 				<span>
-				<h2>Served from host: ${processUniqueUuid}</h2>
+				<h1>Served From host: ${processUniqueUuid}</h1>
 				</span>
 			</div>
 		</heading>
