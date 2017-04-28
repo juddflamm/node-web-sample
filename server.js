@@ -65,10 +65,12 @@ http.createServer(function (req, res) {
 				</span>
 			</div>
 		</heading>
-		<h4>Headers</h4>
-		<ul>
-		${listOfHeaders(req.headers)}
-		</ul>
+		<div class="container">
+			<h4>Headers</h4>
+			<ul>
+			${listOfHeaders(req.headers)}
+			</ul>
+		</div>
 		</body>
 		</html>`;
 	res.end(body);
