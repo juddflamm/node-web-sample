@@ -56,6 +56,13 @@ http.createServer(function (req, res) {
 				letter-spacing: 0;
 				font-weight: 200;
 			}
+
+			h4 {
+				font-size: 120%;
+				margin: .3em 0 .5em .5em;
+				letter-spacing: 0;
+				font-weight: 200;
+			}
 		</style>
 		</head>
 		<body>
@@ -67,12 +74,12 @@ http.createServer(function (req, res) {
 			</div>
 		</heading>
 		<div class="container">
-			<h2>Served From host</h2>
+			<h4>Served From host</h4>
 			<p>
 			${processUniqueUuid}
 			</p>
 
-			<h2>Headers</h2>
+			<h4>Headers</h4>
 			<ul>
 			${listOfHeaders(req.headers)}
 			</ul>
