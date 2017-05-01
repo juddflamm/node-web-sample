@@ -17,6 +17,7 @@ http.createServer(function (req, res) {
 				font-family: sans-serif;
 				font-weight: 100;
 				font-size: 1.125em;
+				margin: 0; padding: 0;
 			}
 			h1, h2, h3, h4, h5, h6 {
 				font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,12 +31,12 @@ http.createServer(function (req, res) {
 			}
 
 			header h1 {
-				font-size: 320%;
+				font-size: 2.5em;
 				font-weight: 100;
 			}
 
-			h4 {
-				font-size: 200%;
+			h2 {
+				font-size: 1.5em;
 				font-weight: 100;
 			}
 		</style>
@@ -46,12 +47,12 @@ http.createServer(function (req, res) {
 		</header>
 		
 		<section>
-			<h4>Served From host</h4>
+			<h2>Served From host</h2>
 			${processUniqueUuid}
 		</section>
 
 		<section>
-			<h4>Headers</h4>
+			<h2>Headers</h2>
 			<ul>
 				${listOfHeaders(req.headers)}
 			</ul>
