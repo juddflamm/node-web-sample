@@ -11,6 +11,7 @@ http.createServer(function (req, res) {
 		<html>
 		<head>
 		<title>Sample NodeJS Webapp</title>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 		<style>
 			html{background-color:#FFF;min-height:100%}
 			body{margin:0}
