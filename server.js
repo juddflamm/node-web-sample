@@ -22,6 +22,10 @@ http.createServer(function (req, res) {
 			h1, h2, h3, h4, h5, h6 {
 				font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
 			header, section, footer {
 				padding: 0 10%;
 			}
@@ -66,7 +70,7 @@ http.createServer(function (req, res) {
 function listOfHeaders(headers) {
 	let html = "";
 	for (var i in headers) {
-		html += (`<li><strong>${i}</strong> ${headers[i]}</li>\n`);
+		html += (`<li>${i}: ${headers[i]}</li>\n`);
 	}
 	return html;
 }
