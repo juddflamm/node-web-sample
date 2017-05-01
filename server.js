@@ -11,7 +11,16 @@ http.createServer(function (req, res) {
 		<html>
 		<head>
 		<title>Sample NodeJS Webapp</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
 		<style>
+			body {
+				font-family: sans-serif;
+				font-weight: 100;
+				font-size: 1.125em;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
 			header, section, footer {
 				padding: 0 10%;
 			}
@@ -21,13 +30,13 @@ http.createServer(function (req, res) {
 			}
 
 			header h1 {
-				font-size: 200%;
-				font-weight: 200;
+				font-size: 320%;
+				font-weight: 100;
 			}
 
 			h4 {
-				font-size: 120%;
-				font-weight: 200;
+				font-size: 200%;
+				font-weight: 100;
 			}
 		</style>
 		</head>
