@@ -13,9 +13,13 @@ http.createServer(function (req, res) {
 		<title>Sample NodeJS Webapp</title>
 		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 		<style>
+			header, section, footer {
+				padding: 0 20%;
+			}
 			header {
 				background-color: skyblue;
 				color: rgb(0, 0, 0);
+				overflow:auto;
 			}
 
 			header h1 {
@@ -33,17 +37,19 @@ http.createServer(function (req, res) {
 		<header>
 			<h1>Node Web Sample</h1>
 		</header>
-		<h4>Served From host</h4>
-		<p>
+		
+		<section>
+			<h4>Served From host</h4>
 			${processUniqueUuid}
-		</p>
+		</section>
 
-		<h4>Headers</h4>
-		<p>
+		<section>
+			<h4>Headers</h4>
 			<ul>
 				${listOfHeaders(req.headers)}
 			</ul>
-		</p>
+		</section>
+
 		</body>
 		</html>`;
 	res.end(body);
