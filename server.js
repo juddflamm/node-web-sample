@@ -14,7 +14,7 @@ http.createServer(function (req, res) {
 		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 		<style>
 			header, section, footer {
-				padding: 0 20%;
+				padding: 0 10%;
 			}
 			header {
 				background-color: skyblue;
