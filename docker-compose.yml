@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: frontier/node-web-sample:master
+    image: frontier/nodewebsample:master
     deploy:
       replicas: 3
       resources:
