@@ -10,8 +10,8 @@ services:
           memory: 50M
       restart_policy:
         condition: on-failure
-      secrets:
-        - TOPSECRET
+    secrets:
+      - TOPSECRET
     ports:
       - "80:80"
     networks:
