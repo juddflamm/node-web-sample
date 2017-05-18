@@ -1,4 +1,5 @@
 var http = require("http");
+var fs = require("fs");
 
 var processUniqueUuid = "xxx".replace(/[xy]/g, function(c) {
   var r = (Math.random() * 16) | 0, v = c == "x" ? r : (r & 0x3) | 0x8;
@@ -64,8 +65,7 @@ http
 		</section>
 		<section>
 			<h2>ENV</h2>
-			<span>${process.env.TOPSECRET}</span>
-			${process.env}
+			<span>${fs.readFileSync("/run/secrets/TOPSECRET").toString()}</span>
 		</section>
 
 		</body>
