@@ -65,6 +65,7 @@ http
 		<section>
 			<h2>ENV</h2>
 			<span>${process.env.TOPSECRET}</span>
+			${process.env}
 		</section>
 
 		</body>

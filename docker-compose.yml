@@ -16,6 +16,8 @@ services:
       - "80:80"
     networks:
       - webnet
+    environment:
+      TOPSECRET: /run/secrets/TOPSECRET
 networks:
   webnet:
 secrets:
