@@ -1,13 +1,14 @@
-var http = require('http');
+var http = require("http");
 
-var processUniqueUuid = 'xxx'.replace(/[xy]/g, function(c) {
-	var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-	return v.toString(16);
+var processUniqueUuid = "xxx".replace(/[xy]/g, function(c) {
+  var r = (Math.random() * 16) | 0, v = c == "x" ? r : (r & 0x3) | 0x8;
+  return v.toString(16);
 });
 
-http.createServer(function (req, res) {
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	var body = `
+http
+  .createServer(function(req, res) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    var body = `
 		<html>
 		<head>
 		<title>Sample NodeJS Webapp</title>
@@ -61,18 +62,23 @@ http.createServer(function (req, res) {
 				${listOfHeaders(req.headers)}
 			</ul>
 		</section>
+		<section>
+			<h2>ENV</h2>
+			<span>${process.env.TOPSECRET}</span>
+		</section>
 
 		</body>
 		</html>`;
-	res.end(body);
-}).listen(80);
+    res.end(body);
+  })
+  .listen(80);
 
 function listOfHeaders(headers) {
-	let html = "";
-	for (var i in headers) {
-		html += (`<li>${i}: ${headers[i]}</li>\n`);
-	}
-	return html;
+  let html = "";
+  for (var i in headers) {
+    html += `<li>${i}: ${headers[i]}</li>\n`;
+  }
+  return html;
 }
 
-console.log('Server running at localhost:80/');
+console.log("Server running at localhost:80/");
